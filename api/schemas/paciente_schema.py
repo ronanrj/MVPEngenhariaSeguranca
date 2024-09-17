@@ -83,6 +83,7 @@ def apresenta_pacientes(pacientes: List[Paciente]):
     for paciente in pacientes:
         result.append({
             "id": paciente.id,
+            "name": paciente.name,
             "age": paciente.age,
             "sex": paciente.sex,
             "cp": paciente.cp,

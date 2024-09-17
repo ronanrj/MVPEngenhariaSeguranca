@@ -28,24 +28,29 @@ class PreProcessador:
         Y = dados[:, -1]
         return train_test_split(X, Y, test_size=percentual_teste, random_state=seed)
     
-    def preparar_form(form):
+    def preparar_form(self,form):
         """ Prepara os dados recebidos do front para serem usados no modelo. """
-        X_input = np.array([form.preg, 
-                            form.plas, 
-                            form.pres, 
-                            form.skin, 
-                            form.test, 
-                            form.mass, 
-                            form.pedi, 
-                            form.age
+        X_input = np.array([form.age,
+                            form.sex,
+                            form.cp,
+                            form.trtbps,
+                            form.chol,
+                            form.fbs,
+                            form.restecg,
+                            form.thalachh,
+                            form.exng,
+                            form.oldpeak
                         ])
+        
+        # Print dos dados recebidos
+        print("Dados recebidos do formulário:", X_input)
         # Faremos o reshape para que o modelo entenda que estamos passando
         X_input = X_input.reshape(1, -1)
         return X_input
     
-    def scaler(X_train):
+    def scaler(self,X_train):
         """ Normaliza os dados. """
         # normalização/padronização
-        scaler = pickle.load(open('./MachineLearning/scalers/minmax_scaler_diabetes.pkl', 'rb'))
-        reescaled_X_train = scaler.transform(X_train)
+        scaler = pickle.load(open('./MachineLearning/scalers/standard_scaler_heart.pkl', 'rb'))
+        reescaled_X_train = self.scaler.transform(X_train)
         return reescaled_X_train

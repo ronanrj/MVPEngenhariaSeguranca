@@ -7,7 +7,7 @@ class Model:
     # TODO: Guardar model como atributo e o preditor receber as entradas.
     # TODO: preditor -> realiza_predicao
     
-    def carrega_modelo(path):
+    def carrega_modelo(self,path):
         """Dependendo se o final for .pkl ou .joblib, carregamos de uma forma ou de outra
         """
         
@@ -18,7 +18,7 @@ class Model:
             raise Exception('Formato de arquivo não suportado')
         return model
     
-    def preditor(model, X_input):
+    def preditor(self,model, X_input):
         """Realiza a predição de um paciente com base no modelo treinado
         """
         diagnosis = model.predict(X_input)

@@ -159,15 +159,15 @@ const newItem = async () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      if (data.pacientes && data.pacientes.some(item => item.name === inputPatient)) {
+      if (data.pacientes && data.pacientes.some(item => item.name === inputName)) {
         alert("O paciente já está cadastrado.\nCadastre o paciente com um nome diferente ou atualize o existente.");
       } else if (inputName === '') {
         alert("O nome do paciente não pode ser vazio!");
       // } else if (isNaN(inputPreg) || isNaN(inputPlas) || isNaN(inputPres) || isNaN(inputSkin) || isNaN(inputTest) || isNaN(inputMass) || isNaN(inputPedi) || isNaN(inputAge)) {
       //   alert("Esse(s) campo(s) precisam ser números!");
       } else {
-        insertList(inputName,inputAge,inputSex,inputCp,inputTrtbps,inputChol,inputFbs,inputRestecg,inputThalachh,inputExng,inputOldpeak);
-        postItem(inputName,inputAge,inputSex,inputCp,inputTrtbps,inputChol,inputFbs,inputRestecg,inputThalachh,inputExng,inputOldpeak);
+        insertList(inputName, inputAge, inputSex, inputCp, inputTrtbps, inputChol, inputFbs, inputRestecg, inputThalachh, inputExng, inputOldpeak);
+        postItem(inputName, inputAge, inputSex, inputCp, inputTrtbps, inputChol, inputFbs, inputRestecg, inputThalachh, inputExng, inputOldpeak);
         alert("Item adicionado!");
       }
     })
@@ -182,8 +182,8 @@ const newItem = async () => {
   Função para inserir items na lista apresentada
   --------------------------------------------------------------------------------------
 */
-const insertList = (name,age,sex,cp,trtbps,chol,fbs,restecg,thalachh,exng,oldpeak,outcome) => {
-  var item = [name,age,sex,cp,trtbps,chol,fbs,restecg,thalachh,exng,oldpeak,outcome];
+const insertList = (namePatient,age,sex,cp,trtbps,chol,fbs,restecg,thalachh,exng,oldpeak,outcome) => {
+  var item = [namePatient,age,sex,cp,trtbps,chol,fbs,restecg,thalachh,exng,oldpeak,outcome];
   var table = document.getElementById('myTable');
   var row = table.insertRow();
 

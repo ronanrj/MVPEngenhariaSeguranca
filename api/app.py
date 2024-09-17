@@ -75,7 +75,9 @@ def predict(form: PacienteSchema):
     Returns:
         dict: representação do paciente e diagnóstico associado
     """
-    # TODO: Instanciar classes
+    preProcessador = PreProcessador()
+    pipeline = Pipeline()
+    model = Model()
 
     # Recuperando os dados do formulário
     name = form.name
@@ -91,14 +93,29 @@ def predict(form: PacienteSchema):
     oldpeak = form.oldpeak
         
     # Preparando os dados para o modelo
-    #X_input = PreProcessador.preparar_form(form)
+    try:
+        X_input = preProcessador.preparar_form(form)
+        print(f"Dados processados para predição: {X_input}")
+        logger.debug(f"Dados processados para predição: {X_input}")
+    except ValueError as e:
+        return {"message": f"Erro no preprocessamento: {str(e)}"}, 400
     # Carregando modelo
-    #model_path = './MachineLearning/pipelines/rf_diabetes_pipeline.pkl'
-    # modelo = Model.carrega_modelo(ml_path)
-    #modelo = Pipeline.carrega_pipeline(model_path)
+    model_path = './MachineLearning/pipelines/nb_heart_pipeline.pkl'
+    try:
+        modelo = pipeline.carrega_pipeline(model_path)
+        logger.debug("Modelo carregado com sucesso.")
+    except Exception as e:
+        logger.error(f"Erro ao carregar o modelo: {e}")
+        return {"message": f"Erro ao carregar o modelo: {str(e)}"}, 400    
     # Realizando a predição
-    #outcome = int(Model.preditor(modelo, X_input)[0])
-    
+    try:
+        outcome = int(model.preditor(modelo, X_input)[0])
+        print(f"Valor predito pelo modelo: {outcome}")
+        logger.debug(f"Predição realizada com sucesso: {outcome}")
+    except Exception as e:
+        logger.error(f"Erro na predição: {e}")
+        return {"message": f"Erro na predição: {str(e)}"}, 400     
+         
     paciente = Paciente(
         name = name,
         age = age,
@@ -111,7 +128,7 @@ def predict(form: PacienteSchema):
         thalachh = thalachh,
         exng = exng,
         oldpeak = oldpeak,
-        outcome = "outcome"
+        outcome = outcome
     )
     logger.debug(f"Adicionando produto de nome: '{paciente.name}'")
     
