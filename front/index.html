@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>AI Predicao ataque do coração</title>
+    <link rel="icon" href="img/obesidade.jpg" type="image/png">
+</head>
+
+<body>
+     <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h2>Systema de predicao ao ataque do coração</h2>
+            <br>
+            <p>Este sistema foi desenvolvido para auxiliar no diagnostico de classificação ao ataque do coração.</p>
+            <p>Para isso, basta preencher os campos abaixo com os dados do paciente e clicar em "Diagnosticar".</p>
+        </div>
+        <!-- <div class="banner">
+            <img src="img/home.jpeg">
+        </div> -->
+    </header>
+
+     <!-- Opções para adicionar um novo item -->
+     
+    <section class="newItem">
+        <input type="text" id="newInput" placeholder="Name">      
+        <input type="text" id="newAge" placeholder="Age">
+        <input type="text" id="newSex" placeholder="Sex">         
+        <input type="text" id="newCp" placeholder="Cp">
+        <input type="text" id="newTrtbps" placeholder="Trtbps">
+        <input type="text" id="newChol" placeholder="Chol">
+        <input type="text" id="newFbs" placeholder="Fbs">
+        <input type="text" id="newRestecg" placeholder="Restecg">
+        <input type="text" id="newThalachh" placeholder="Thalachh">
+        <input type="text" id="newExng" placeholder="Exng">
+        <input type="text" id="newOldpeak" placeholder="Oldpeak">
+        <span onclick="newItem()" class="addBtn">Diagnosticar</span>
+    </section>
+
+    <!-- Tabela com items existentes -->
+    <section class="items">
+        <table id="myTable">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Cp</th>
+                <th>Trtbps</th>
+                <th>Chol</th>
+                <th>Fbs</th>
+                <th>Restecg</th>
+                <th>Thalachh</th>
+                <th>Exng</th>
+                <th>Oldpeak</th>
+                <th>Diagnostic</th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15" height="15"></th>
+                <!-- <th><img src="img/edit.png" width="15" height="15"></th> -->
+            </tr>
+        </table>
+    </section>
+    
+      <!-- Legendas abaixo da tabela -->
+      <section class="legends">
+        <h3>Legendas:</h3>
+        <ul>
+            <li><strong>Age:</strong> age in years</li>
+            <li><strong>Sex(Sex):</strong> sex (1 = male; 0 = female)</li>
+            <li><strong>Cp:</strong> chest pain type</li>
+            <li><strong>Trtbps:</strong> resting blood pressure (in mm Hg)</li>
+            <li><strong>Chol:</strong> serum cholestoral in mg/dl</li>            
+            <li><strong>Fbs:</strong> (fasting blood sugar > 120 mg/dl)  (1 = true; 0 = false)</li>
+            <li><strong>Restecg:</strong> resting electrocardiographic results Value 0: normal , Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</li>
+            <li><strong>Thalachh:</strong> maximum heart rate achieved</li>
+            <li><strong>Exng:</strong> Característica, Binária, "Você monitora as calorias que consome diariamente?"</li>
+            <li><strong>Oldpeak:</strong> ST depression induced by exercise relative to rest</li>
+            <li><strong>Outcome:</strong> Target</li>
+        </ul>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
