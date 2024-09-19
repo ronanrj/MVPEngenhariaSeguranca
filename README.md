@@ -5,6 +5,11 @@ ProjetoMVP backEnd API - Este projeto faz parte da entrega para conclusão do mv
 
 > https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset
 ---
+## O notebook criado no colab encontra-se versionado na pasta
+> api/MachineLearning/notebooks/TreinamentoCoracao.ipynb
+
+## o Dataset utilizado no modelo encontra-se na URL
+> url = "https://raw.githubusercontent.com/ronanrj/dataset/main/heart.csv"
 ## Como executar 
 
 Após clonar o repositório, é necessário ir ao diretório raiz da api, pelo terminal, para poder executar os comandos descritos abaixo.
