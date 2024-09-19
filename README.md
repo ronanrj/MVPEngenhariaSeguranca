@@ -8,9 +8,18 @@ ProjetoMVP backEnd API - Este projeto faz parte da entrega para conclusão do mv
 ## O notebook criado no colab encontra-se versionado na pasta
 > api/MachineLearning/notebooks/TreinamentoCoracao.ipynb
 
-## o Dataset utilizado no modelo encontra-se na URL
+## O Dataset utilizado no modelo encontra-se na URL
 > url = "https://raw.githubusercontent.com/ronanrj/dataset/main/heart.csv"
-> api/MachineLearning/dataset/heart.csv
+
+## O MODELO criado no colab encontra-se na pasta
+> api/MachineLearning/models/nb_heart_classifier.pkl
+
+## O SCALER criado no colab encontra-se na pasta 
+> api/MachineLearning/scalers/standard_scaler_heart.pkl
+
+## o PIPELINE criado no colab encontra-se na pasta
+> api/MachineLearning/pipelines/nb_heart_pipeline.pkl
+
 ## Como executar 
 
 Após clonar o repositório, é necessário ir ao diretório raiz da api, pelo terminal, para poder executar os comandos descritos abaixo.
