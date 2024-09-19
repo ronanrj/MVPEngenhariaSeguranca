@@ -1,5 +1,5 @@
-# ProjetoMVP backEnd API - análise e previsão de ataque cardíaco
-ProjetoMVP backEnd API - Este projeto faz parte da entrega para conclusão do mvp da sprint Qualidade de Software, Segurança e Sistemas Inteligentes do curso de pós graduação da PUC RIO. O objetivo do projeto é a análise e previsão de ataque cardíaco, no qual por uma entrada de um formulário, a api utilizando um modelo já treinado, analisa os dados de entrada e  retorna a possibilidade do usuário ter um ataque cardíaco.
+# ProjetoMVP - análise e previsão de ataque cardíaco
+ProjetoMVP - Este projeto faz parte da entrega para conclusão do mvp da sprint Qualidade de Software, Segurança e Sistemas Inteligentes do curso de pós graduação da PUC RIO. O objetivo do projeto é a análise e previsão de ataque cardíaco, no qual por uma entrada de um formulário, a api utilizando um modelo já treinado, analisa os dados de entrada e  retorna a possibilidade do usuário ter um ataque cardíaco.
 
 ##  Dataset utilizado
 
@@ -44,3 +44,10 @@ automaticamente após uma mudança no código fonte.
 
 Abra o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador para verificar o status da API em execução.
 
+# Projeto FrontEnd - análise e previsão de ataque cardíaco
+
+Projeto - análise e previsão de ataque cardíaco com consumo de api
+
+## Como executar
+
+Basta fazer o download do projeto e abrir o arquivo index.html no seu browser.
