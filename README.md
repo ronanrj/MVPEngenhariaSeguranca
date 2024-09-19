@@ -63,6 +63,9 @@ automaticamente após uma mudança no código fonte.
 
 Abra o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador para verificar o status da API em execução.
 
+## Para rodar o teste no backend:
+> pytest -v test_modelos.py
+
 # Projeto FrontEnd - análise e previsão de ataque cardíaco
 
 Projeto - análise e previsão de ataque cardíaco com consumo de api
