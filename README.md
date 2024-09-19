@@ -20,7 +20,7 @@ ProjetoMVP backEnd API - Este projeto faz parte da entrega para conclusão do mv
 ## o PIPELINE criado no colab encontra-se na pasta
 > api/MachineLearning/pipelines/nb_heart_pipeline.pkl
 
-## OS dataset de teste encontram-se na pasta (contem x e y)
+## O dataset de teste encontram-se na pasta (contem x e y)
 > api/MachineLearning/data
 
 
