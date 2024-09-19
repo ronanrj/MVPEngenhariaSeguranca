@@ -10,6 +10,7 @@ ProjetoMVP backEnd API - Este projeto faz parte da entrega para conclusão do mv
 
 ## o Dataset utilizado no modelo encontra-se na URL
 > url = "https://raw.githubusercontent.com/ronanrj/dataset/main/heart.csv"
+> api/MachineLearning/dataset/heart.csv
 ## Como executar 
 
 Após clonar o repositório, é necessário ir ao diretório raiz da api, pelo terminal, para poder executar os comandos descritos abaixo.
