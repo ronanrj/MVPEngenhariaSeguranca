@@ -1,10 +1,7 @@
-# Meu Front
+# Projeto FrontEnd - análise e previsão de ataque cardíaco
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Full Stack Básico** 
+Projeto - análise e previsão de ataque cardíaco com consumo de api
 
-O objetivo aqui é ilutsrar o conteúdo apresentado na terceira aula.
-
----
 ## Como executar
 
 Basta fazer o download do projeto e abrir o arquivo index.html no seu browser.

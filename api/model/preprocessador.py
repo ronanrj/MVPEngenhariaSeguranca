@@ -6,16 +6,15 @@ class PreProcessador:
 
     def separa_teste_treino(self, dataset, percentual_teste, seed=7):
         """ Cuida de todo o pré-processamento. """
-        # limpeza dos dados e eliminação de outliers
-
-        # feature selection
-
-        # divisão em treino e teste
+ 
+        # Aqui está sendo chamando uma função que vai dividir os dados em treino e teste.
+        # O método `__preparar_holdout` faz a divisão de forma aleatória, 
+        # garantindo que uma parte dos dados seja usada para treinar o modelo 
+        # e a outra parte para testar o desempenho dele.
         X_train, X_test, Y_train, Y_test = self.__preparar_holdout(dataset,
                                                                   percentual_teste,
                                                                   seed)
-        # normalização/padronização
-        
+        # normalização/padronização        
         return (X_train, X_test, Y_train, Y_test)
     
     def __preparar_holdout(self, dataset, percentual_teste, seed):
@@ -23,6 +22,7 @@ class PreProcessador:
         Assume que a variável target está na última coluna.
         O parâmetro test_size é o percentual de dados de teste.
         """
+        
         dados = dataset.values
         X = dados[:, 0:-1]
         Y = dados[:, -1]
@@ -44,7 +44,12 @@ class PreProcessador:
         
         # Print dos dados recebidos
         print("Dados recebidos do formulário:", X_input)
-        # Faremos o reshape para que o modelo entenda que estamos passando
+        
+        # O modelo de Machine Learning espera receber os dados de entrada
+        # em um formato específico, como se fossem várias linhas de dados (amostras).
+        # Mesmo que estejamos passando apenas uma amostra, precisamos "ajustar" a forma dos dados
+        # para que o modelo entenda que é uma única linha com várias colunas .
+        # O `reshape(1, -1)` faz exatamente isso: ele transforma o input em uma matriz de 1 linha e várias colunas.
         X_input = X_input.reshape(1, -1)
         return X_input
     

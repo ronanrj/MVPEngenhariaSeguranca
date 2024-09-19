@@ -5,11 +5,11 @@ li {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(225, 222, 199);
+    background-color: rgb(199, 225, 222);
 }
 
 header {
-    background-color: rgb(225, 222, 199);
+    background-color: rgb(199, 222, 222);
     text-align: center;
     position: relative;
     width: 100%;
@@ -36,7 +36,7 @@ header {
 }
 
 .newItem {
-    background-color: rgb(225, 222, 199);
+    background-color: rgb(199, 222, 222);
     padding: 30px 40px;
     color: white;
     display: flex;

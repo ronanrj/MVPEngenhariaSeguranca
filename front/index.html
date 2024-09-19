@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="styles.css">
 
-    <title>AI Predicao ataque do coração</title>
+    <title>AI Análise e previsão de ataque cardíaco.</title>
     <link rel="icon" href="img/obesidade.jpg" type="image/png">
 </head>
 
@@ -15,14 +15,11 @@
      <!-- Cabeçalho de informações do sistema -->
     <header>
         <div class="title">
-            <h2>Systema de predicao ao ataque do coração</h2>
+            <h2>Sistema para análise e previsão de ataque cardíaco</h2>
             <br>
-            <p>Este sistema foi desenvolvido para auxiliar no diagnostico de classificação ao ataque do coração.</p>
+            <p>Este sistema foi desenvolvido para análise e previsão de ataque cardíaco.</p>
             <p>Para isso, basta preencher os campos abaixo com os dados do paciente e clicar em "Diagnosticar".</p>
         </div>
-        <!-- <div class="banner">
-            <img src="img/home.jpeg">
-        </div> -->
     </header>
 
      <!-- Opções para adicionar um novo item -->
@@ -59,7 +56,6 @@
                 <th>Oldpeak</th>
                 <th>Diagnostic</th>
                 <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15" height="15"></th>
-                <!-- <th><img src="img/edit.png" width="15" height="15"></th> -->
             </tr>
         </table>
     </section>
@@ -68,17 +64,17 @@
       <section class="legends">
         <h3>Legendas:</h3>
         <ul>
-            <li><strong>Age:</strong> age in years</li>
-            <li><strong>Sex(Sex):</strong> sex (1 = male; 0 = female)</li>
-            <li><strong>Cp:</strong> chest pain type</li>
-            <li><strong>Trtbps:</strong> resting blood pressure (in mm Hg)</li>
-            <li><strong>Chol:</strong> serum cholestoral in mg/dl</li>            
-            <li><strong>Fbs:</strong> (fasting blood sugar > 120 mg/dl)  (1 = true; 0 = false)</li>
-            <li><strong>Restecg:</strong> resting electrocardiographic results Value 0: normal , Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</li>
-            <li><strong>Thalachh:</strong> maximum heart rate achieved</li>
-            <li><strong>Exng:</strong> Característica, Binária, "Você monitora as calorias que consome diariamente?"</li>
-            <li><strong>Oldpeak:</strong> ST depression induced by exercise relative to rest</li>
-            <li><strong>Outcome:</strong> Target</li>
+            <li><strong>Age:</strong> Idade da pessoa </li>
+            <li><strong>Sex:</strong> Gênero da pessoa (1 = homem; 0 = mulher)</li>
+            <li><strong>Cp:</strong> Tipo de dor no peito (Valor 1: angina típica, Valor 2: angina atípica,Valor 3: dor não anginosa,Valor 4: assintomático)</li>
+            <li><strong>Trtbps:</strong> Pressão arterial em repouso (em mm Hg)(Inteiro)</li>
+            <li><strong>Chol:</strong> Colesterol em mg/dl obtido via sensor de IMC (Inteiro)</li>            
+            <li><strong>Fbs:</strong> (Glicose em jejum > 120 mg/dl) (1 = verdadeiro; 0 = falso)</li>
+            <li><strong>Restecg:</strong> Resultados do eletrocardiograma em repouso Valor 0: normal , Valor 1: com anormalidade na onda ST-T (inversões da onda T e/ou elevação ou depressão do segmento ST de > 0,05 mV)  </li>
+            <li><strong>Thalachh:</strong> Frequência cardíaca máxima alcançada (Inteiro)</li>
+            <li><strong>Exng:</strong> Angina induzida por exercício (1 = sim; 0 = não)</li>
+            <li><strong>Oldpeak:</strong> Pico anterior (Real)</li>
+            <li><strong>Diagnostic:</strong> Diagnostico</li>
         </ul>
     </section>
 

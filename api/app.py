@@ -59,22 +59,33 @@ def get_pacientes():
           responses={"200": PacienteViewSchema, "400": ErrorSchema, "409": ErrorSchema})
 def predict(form: PacienteSchema):
     """Adiciona um novo paciente à base de dados
-    Retorna uma representação dos pacientes e diagnósticos associados.
-    
-    Args:
-        name (str): nome do paciente
-        preg (int): número de vezes que engravidou: Pregnancies
-        plas (int): concentração de glicose no plasma: Glucose
-        pres (int): pressão diastólica (mm Hg): BloodPressure
-        skin (int): espessura da dobra cutânea do tríceps (mm): SkinThickness
-        test (int): insulina sérica de 2 horas (mu U/ml): Insulin
-        mass (float): índice de massa corporal (peso em kg/(altura em m)^2): BMI
-        pedi (float): função pedigree de diabetes: DiabetesPedigreeFunction
-        age (int): idade (anos): Age
-        
-    Returns:
-        dict: representação do paciente e diagnóstico associado
+        Conjunto de dados de análise e previsão de ataque cardíaco
+
+        Args:
+            name (str): Nome do paciente
+            age (int): Idade da pessoa
+            sex (int): Gênero da pessoa (1 = homem; 0 = mulher)
+            cp (int): Tipo de dor no peito:
+                - Valor 1: angina típica
+                - Valor 2: angina atípica
+                - Valor 3: dor não anginosa
+                - Valor 4: assintomático
+            trtbps (int): Pressão arterial em repouso (em mm Hg)
+            chol (int): Colesterol em mg/dl obtido via sensor de IMC
+            fbs (int): Glicose em jejum > 120 mg/dl (1 = verdadeiro; 0 = falso)
+            restecg (int): Resultados do eletrocardiograma em repouso:
+                - Valor 0: normal
+                - Valor 1: com anormalidade na onda ST-T (inversões da onda T e/ou elevação ou depressão do segmento ST de > 0,05 mV)
+            thalachh (int): Frequência cardíaca máxima alcançada
+            exng (int): Angina induzida por exercício (1 = sim; 0 = não)
+            oldpeak (float): Pico anterior (valor real)
+            diagnostic (int): Diagnóstico do paciente (0 = sem doença, 1 = com doença)
+
+        Returns:
+            dict: Representação do paciente e diagnóstico associado
     """
+    #Instanciar as classes
+    
     preProcessador = PreProcessador()
     pipeline = Pipeline()
     model = Model()

@@ -5,8 +5,6 @@ from typing import Union
 
 from  model import Base
 
-# colunas = Pregnancies,Glucose,BloodPressure,SkinThickness,test,BMI,DiabetesPedigreeFunction,Age,Outcome
-
 class Paciente(Base):
     __tablename__ = 'pacientes'
     
